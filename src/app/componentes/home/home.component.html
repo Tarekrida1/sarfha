@@ -1,0 +1,65 @@
+<!---start top nav-->
+<div id="topnav">
+  <span>صرفها</span>
+  <span>الشروط</span>
+</div>
+<!---end top nav -->
+<!----start home -->
+<div class="home-container container-fluid">
+  <div class="row">
+    <!---start side nav bar-->
+    <div class="quick-links col-md-3 d-none d-md-block">
+      <div class="quick-links-content">
+        <ul class="navbar-nav">
+          <a href="#" class="btn-hover"><li>الصفحة الرئيسة</li></a>
+          <a href="#" class="btn-hover"><li>الأقســــام</li></a>
+          <a href="#" class="btn-hover"><li>اخر المنتجات</li></a>
+          <a href="#" class="btn-hover"><li>اخر الاخبار</li></a>
+          <a href="#" class="btn-hover"><li>خدمة العملاء</li></a>
+          <a href="#" class="btn-hover"><li>السيــــارات</li></a>
+          <a href="#" class="btn-hover"><li>العقارات والأراضي</li></a>
+          <a href="#" class="btn-hover"><li>هدايا وألعاب</li></a>
+          <a href="#" class="btn-hover"><li>النقل والشحن</li></a>
+          <a href="#" class="btn-hover"><li>تكييف وكهربائيات</li></a>
+          <a href="#" class="btn-hover"><li>طيـــــــور</li></a>
+          <a href="#" class="btn-hover"><li>وظــــائف</li></a>
+          <a href="#" class="btn-hover"><li>خدمات تجارية</li></a>
+          <a href="#" class="btn-hover"><li>مستلزمات رجالي</li></a>
+          <a href="#" class="btn-hover"><li>مستلزمات نسائية</li></a>
+        </ul>
+      </div>
+    </div>
+    <!-----end side nav-->
+    <!--- start catgegories-->
+    <div class="category-content col-md-9 col-sm-12">
+      <div class="category">
+        <div class="container">
+          <div class="selectcity">
+            <span>إختر المدينة الحالية <span>(جدة)</span></span>
+          </div>
+          <div class="row">
+            <div
+              class="category-item col-md-3 col-sm-4 col-4"
+              *ngFor="let category of categories; index as i"
+            >
+              <a href="#" [routerLink]="['/home/', category.id]">
+                <div class="card">
+                  <img
+                    [src]="category.photoPath"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">{{ category.name }}</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!----- end categories -->
+  </div>
+</div>
+<!----end home container-->

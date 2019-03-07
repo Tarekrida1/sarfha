@@ -1,0 +1,37 @@
+@import '../../../styles.scss';
+.navbar { // navbar container
+    background: $main-color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    .navbar-brand { // brand
+        color: #fff;
+        font-weight: bold
+    }
+    .navbar-nav { // navbar ul
+        flex-direction: unset;
+        padding-left: 0;
+        margin-bottom: 0;
+        margin: auto;
+        .nav-link { // navbar links
+            padding-right: 30px;
+            color: #fff;
+            .message-icon {
+                position: relative;
+                #message-alert { // notification icon
+                    position: absolute;
+                    top: -5px;
+                    text-align: center;
+                    font-size: 10px;
+                    right: -3px;
+                    height: 12px;
+                    width: 12px;
+                    background: red;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}

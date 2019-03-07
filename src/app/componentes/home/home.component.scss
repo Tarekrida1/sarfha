@@ -1,0 +1,86 @@
+@import "../../../styles.scss";
+// start home
+.home-container {
+  background: #d6dfe4;  //home gray background
+
+// start quick links
+.quick-links {
+  background: #f7fffb;
+  box-shadow: 0px 0 20px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0 20px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0 20px 0px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0px 0 20px 0px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0px 0 20px 0px rgba(0, 0, 0, 0.1);
+  padding: 60px 0;
+  .quick-links-content {
+    .navbar-nav {
+      padding: 0;
+      a {
+        text-decoration: none;
+        border-bottom: 1px solid rgba(43, 182, 115, 0.5);
+        padding: 10px 0;
+      }
+      li {
+        margin: 0;
+        padding-right: 40px;
+        text-align: right;
+        font-size: 25px;
+        font-weight: 700;
+        color: $main-color;
+      }
+    }
+  }
+}
+// end queck links
+// start categories
+.category {
+  padding-top: 80px;
+  .selectcity {
+    margin: auto;
+    background: $main-color;
+    text-align: right;
+    width: 205px;
+    padding: 15px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    span {
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+    }
+  }
+  .category-item {
+    padding: 5px;
+    a {
+      text-decoration: none;
+    }
+    .card {
+      margin: 5px 0px;
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.26);
+      -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.26);
+      -moz-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.26);
+      -o-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.26);
+      -ms-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.26);
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 0px 18px 0px rgba(43, 182, 115, 0.39);
+      }
+      .card-body {
+        padding: 2px;
+        .card-title {
+          text-align: center;
+          font-size: 16px;
+          margin: 5px 0;
+          color: #323131;
+        }
+      }
+    }
+  }
+}
+// end categories
+}
+// end home

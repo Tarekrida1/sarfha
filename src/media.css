@@ -1,0 +1,68 @@
+@media (min-width: 769px) {
+    .navbar {
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+    }
+    #topnav {
+      display: none
+    }
+}
+@media (max-width: 768px) {
+  body {
+    padding-top: 40px !important;
+    padding-bottom: 40px
+  }
+  #topnav {
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    background: #2bb673;
+    position: fixed;
+    top: 0;
+    z-index: 999999;
+    left: 0;
+    padding: 0 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+  }
+  #topnav  span {
+    cursor: pointer;
+  }
+  #topnav  span:nth-of-type(2) {
+    float: right
+  }
+    .navbar {
+        top: unset !important;
+        bottom: 0 !important;
+    }
+    .navbar .navbar-nav .nav-link {
+      padding: 0 20px 0 0 !important
+
+    }
+    .category  {
+      padding-top: 10px !important;
+      padding-bottom: 40px !important;
+    }
+    .category .card .card-body .card-title {
+      font-size: 9px !important;
+      font-weight: bold !important
+    }
+    .messages-container .messages-content {
+      padding-top: 0 !important;
+    }
+    .message-input {
+      bottom: 40px !important;
+      height: 60px!important;
+    }
+    .message-input .form-control {
+      height: 60px !important;
+    }
+    .message-input  .sendbtn {
+      bottom: 50px !important;
+    }
+    .message-input span {
+      bottom: 70px !important;
+    }
+}

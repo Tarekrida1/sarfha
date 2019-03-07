@@ -1,0 +1,61 @@
+<!----start nav-->
+<div id="topnav">
+  <span>الرسائل</span>
+</div>
+<!---- end nav -->
+<!--- start messages -->
+<div class="messages-container container-fluid">
+  <div class="row">
+    <div class="quick-links col-md-3 d-none d-md-block">
+      <div class="quick-links-content">
+        <ul class="navbar-nav">
+          <a href="#" class="btn-hover"><li>إسم العميل</li></a>
+        </ul>
+      </div>
+    </div>
+    <div class="messages-content col-md-9 col-sm-12">
+      <table class="table table-striped">
+        <tbody>
+          <tr *ngFor="let mes of messages; index as i">
+            <td
+              style="
+                text-align: right;
+            "
+            >
+              <i class="fas fa-user"></i> {{ mes.userName }}
+            </td>
+            <td
+              style="
+                text-align: center;
+            "
+            >
+              {{ mes.content }}
+            </td>
+            <td>
+              <span> {{ mes.showTime }} <i class="far fa-clock"></i></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <form #f="ngForm" (ngSubmit)="sendMessage(f)" class="message-input">
+        <div class="form-group">
+          <input
+            type="text"
+            ngModel
+            name="content"
+            class="form-control"
+            placeholder="اكتب رسالتك"
+            #clearinput  required>
+        </div>
+        <input
+          type="submit"
+          (click)="clearinput.value = ''"
+          value="إرسال"
+          class="sendbtn" [disabled]="f.invalid"
+        />
+        <span><i class="fas fa-envelope"></i></span>
+      </form>
+    </div>
+  </div>
+</div>
+<!------end messages-->
